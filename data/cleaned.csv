@@ -1,19 +1,19 @@
 IMBD title ID,Original title,Release year,Genre,Duration,Country,Content Rating,Director,Income,Votes,Score
 tt0111161,The Shawshank Redemption,1995/02/10,Drama,142,USA,R,Frank Darabont,$ 28815245,2.278.845,9.3
 tt0068646,The Godfather,1995/02/10,"Crime, Drama",175,USA,R,Francis Ford Coppola,$ 246120974,1.572.674,9.2
-tt0468569,The Dark Knight,1995/02/10,"Action, Crime, Drama",152,US,PG-13,Christopher Nolan,$ 1005455211,2.241.615,9.
+tt0468569,The Dark Knight,1995/02/10,"Action, Crime, Drama",152,USA,PG-13,Christopher Nolan,$ 1005455211,2.241.615,9.
 tt0071562,The Godfather: Part II,1975/09/25,"Crime, Drama",220,USA,R,Francis Ford Coppola,"$ 4o8,035,783",1.098.714,"9,.0"
 tt0110912,Pulp Fiction,1994/10/28,"Crime, Drama",NaN,USA,R,Quentin Tarantino,$ 222831817,1.780.147,"8,9f"
 tt0167260,The Lord of the Rings: The Return of the King,1994/10/28,"Action, Adventure, Drama",201,New Zealand,PG-13,Peter Jackson,$ 1142271098,1.604.280,08.9
 tt0108052,Schindler's List,1994/03/11,"Biography, Drama, History",NaN,USA,R,Steven Spielberg,$ 322287794,1.183.248,8.9
-tt0050083,12 Angry Men,1957/09/04,"Crime, Drama",96,USA,Not Rated,Sidney Lumet,$ 576,668.473,8.9
+tt0050083,12 Angry Men,1957/09/04,"Crime, Drama",96,USA,Unrated,Sidney Lumet,$ 576,668.473,8.9
 tt1375666,Inception,2010/09/24,"Action, Adventure, Sci-Fi",148,USA,PG-13,Christopher Nolan,$ 869784991,2.002.816,8..8
 tt0137523,Fight Club,2010/09/24,Drama,NaN,UK,R,David Fincher,$ 101218804,1.807.440,8.8
 tt0109830,Forrest Gump,1994/10/06,"Drama, Romance",142,USA,PG-13,Robert Zemeckis,$ 678229452,1.755.490,8:8
-tt0120737,The Lord of the Rings: The Fellowship of the Ring,2002/01/18,"Action, Adventure, Drama",178,New Zesland,PG-13,Peter Jackson,$ 887934303,1.619.920,8.8
-tt0060196,"Il buono, il brutto, il cattivo",2002/01/18,Western,161,Italy,Approved,Sergio Leone,$ 25252481,672.499,8.8
+tt0120737,The Lord of the Rings: The Fellowship of the Ring,2002/01/18,"Action, Adventure, Drama",178,New Zealand,PG-13,Peter Jackson,$ 887934303,1.619.920,8.8
+tt0060196,"Il buono, il brutto, il cattivo",2002/01/18,Western,161,Italy,Unrated,Sergio Leone,$ 25252481,672.499,8.8
 tt0133093,The Matrix,1999/05/07,"Action, Sci-Fi",NaN,USA,R,"Lana Wachowski, Lilly Wachowski",$ 465718588,1.632.315,++8.7
-tt0167261,The Lord of the Rings: The Two Towers,1999/05/07,"Action, Adventure, Drama",179,New Zeland,PG-13,Peter Jackson,$ 951227416,1.449.778,8.7.
+tt0167261,The Lord of the Rings: The Two Towers,1999/05/07,"Action, Adventure, Drama",179,New Zealand,PG-13,Peter Jackson,$ 951227416,1.449.778,8.7.
 tt0080684,Star Wars: Episode V - The Empire Strikes Back,1980/09/19,"Action, Adventure, Fantasy",NaN,USA,PG,Irvin Kershner,$ 549265501,1.132.073,"8,7e-0"
 tt0099685,Goodfellas,1990/09/20,"Biography, Crime, Drama",146,USA,R,Martin Scorsese,$ 46879633,991.505,8.7
 tt0073486,One Flew Over the Cuckoo's Nest,1990/09/20,Drama,NaN,USA,R,Milos Forman,$ 108997629,891.071,8.7
@@ -22,10 +22,10 @@ tt0114369,Se7en,1995/12/15,"Crime, Drama, Mystery",127,USA,R,David Fincher,$ 327
 tt0102926,The Silence of the Lambs,1991/03/05,"Crime, Drama, Thriller",118,USA,R,Jonathan Demme,$ 272753884,1.234.134,"8,6"
 tt0076759,Star Wars,1977/10/20,"Action, Adventure, Fantasy",121,USA,PG,George Lucas,$ 775768912,1.204.107,8.6
 tt0120815,Saving Private Ryan,1998/10/30,"Drama, War",169,USA,R,Steven Spielberg,$ 482349603,1.203.825,8.6
-tt0120689,The Green Mile,2000/10/03,"Crime, Drama, Fantasy",189,US.,R,Frank Darabont,$ 286801374,1.112.336,8.6
+tt0120689,The Green Mile,2000/10/03,"Crime, Drama, Fantasy",189,USA,R,Frank Darabont,$ 286801374,1.112.336,8.6
 tt0317248,Cidade de Deus,2003/05/09,"Crime, Drama",130,Brazil,R,"Fernando Meirelles, Kátia Lund",$ 30680793,685.856,8.6
 tt0245429,Sen to Chihiro no kamikakushi,2003/04/18,"Animation, Adventure, Family",125,Japan,PG,Hayao Miyazaki,$ 355467056,626.693,8.6
-tt0118799,La vita B9 bella,1997/12/20,"Comedy, Drama, Romance",116,Italy1,NaN,Roberto Benigni,$ 230098753,605.648,8.6
+tt0118799,La vita B9 bella,1997/12/20,"Comedy, Drama, Romance",116,Italy,NaN,Roberto Benigni,$ 230098753,605.648,8.6
 tt6751668,Gisaengchung,2019/11/07,"Comedy, Drama, Thriller",132,South Korea,NaN,Bong Joon Ho,$ 257604912,470.931,8.6
 tt0038650,It's a Wonderful Life,1948/03/11,"Drama, Family, Fantasy",130,USA,PG,Frank Capra,$ 6130720,388.310,8.6
 tt0047478,Shichinin no samurai,1955/08/19,"Action, Adventure, Drama",207,Japan,Unrated,Akira Kurosawa,$ 322773,307.958,8.6

@@ -1,5 +1,5 @@
 import pandas as pd
-import numpy as np
+from difflib import get_close_matches
 
 
 # Load the CSV file into a DataFrame
@@ -48,6 +48,40 @@ df['Duration'] = pd.to_numeric(df['Duration'], errors='coerce')
 # make the column to int type
 df['Duration'] = df['Duration'].astype('Int64')
 
+############ Handle 'Country' column ###########
+
+# Create a mapping dictionary to correct common misspellings and variations of country names
+mapping = {
+    'US': 'USA',
+    'US.': 'USA',
+    'New Zeland': 'New Zealand',
+    'New Zesland': 'New Zealand',
+    'Italy1': 'Italy',
+}
+
+# replace the misspelled country names in the 'Country' column using our mapping dictionary
+df['Country'] = df['Country'].replace(mapping)
+
+############# Handle 'Content Rating' column ###########
+
+# setting rating map
+rating_map = {
+    'Not Rated': 'Unrated',
+    'Approved': 'Unrated',
+}
+
+# Replace the values in the 'Content Rating' column using the rating_map dictionary
+df['Content Rating'] = df['Content Rating'].replace(rating_map)
+
+########### Handle 'Director' column ###########
+
+# Delete all extra spaces at the beginning and end of the string in the 'Director' column
+df['Director'] = df['Director'].str.strip()
+
+# delete all extra spaces between words in the 'Director' column
+df['Director'] = df['Director'].str.replace(r'\s+', ' ', regex=True)
+
+########### Handle 'Income' column ###########
+
 # move everything to new csv file with printing "NaN" on missing value instead of blank
 df.to_csv('data/cleaned.csv', index=False, na_rep='NaN')
-
