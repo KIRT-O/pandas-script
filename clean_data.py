@@ -1,5 +1,4 @@
 import pandas as pd
-from difflib import get_close_matches
 
 
 # Load the CSV file into a DataFrame
@@ -83,5 +82,55 @@ df['Director'] = df['Director'].str.replace(r'\s+', ' ', regex=True)
 
 ########### Handle 'Income' column ###########
 
-# move everything to new csv file with printing "NaN" on missing value instead of blank
-df.to_csv('data/cleaned.csv', index=False, na_rep='NaN')
+# turn the 'income' column to string type to be able to apply string operations
+df['Income'] = df['Income'].astype(str)
+
+# make every "o" to "0" (zero) to avoid confusion between letter "o" and number "0"
+df['Income'] = df['Income'].str.replace('o', '0', case=False)
+
+# delete everything not a digit like "$" or "," or " " or any other character, and keep only the numbers and the decimal point
+# the regex pattern r'[^\d.]' means: delete anything except digits and the decimal point
+df['Income'] = df['Income'].str.replace(r'[^\d.]', '', regex=True)
+
+# 4. convert the column to a numeric type (float or int)
+df['Income'] = pd.to_numeric(df['Income'], errors='coerce')
+
+############# Handle 'Votes' column ###########
+
+# make the column string type to be able to apply string operations
+df['Votes'] = df['Votes'].astype(str).str.replace('.', '', regex=False).str.strip()
+
+# Delete everything not a digit like "," or " " or any other character, and keep only the numbers
+df['Votes'] = df['Votes'].str.replace(r'[^\d]', '', regex=True)
+
+# make the data type into int type, and if there is an error, it will be set to NaN
+df['Votes'] = pd.to_numeric(df['Votes'], errors='coerce').astype('Int64')
+
+############# Handle 'Score' column ###########
+
+# Turn the column into string type to be able to apply string operations, and remove extra spaces at the beginning and end of the string
+df['Score'] = df['Score'].astype(str).str.strip()
+
+# make a series of string replacements to clean the 'Score' column
+df['Score'] = (
+    df['Score']
+    .str.replace(r',', '.', regex=False)         # convert "," to "." (8,8 -> 8.8)
+    .str.replace(':', '.', regex=False)          # convert ":" to "." (8:8 -> 8.8)
+    .str.replace(r'\.+', '.', regex=True)        # merge repeated dots (8..8 -> 8.8)
+    .str.replace(r'^\.', '0.',  regex=True)      # add 0 before dot at the beginning (.0 -> 0.0 or .4 -> 0.4)
+    .str.replace(r'\.$', '.0', regex=True)       # add 0 after dot at the end (9. -> 9.0)
+    .str.replace(r'e-?0$', '.0', regex=True)     # fix formats like (7e-0 -> 7.0)
+)
+
+# take first number from the string, and ignore other like (++, f, e-0)
+df['Score'] = df['Score'].str.extract(r'(\d+\.?\d*)')[0]
+
+# Final conversion of the Score column to floating-point numbers
+df['Score'] = pd.to_numeric(df['Score'], errors='coerce')
+
+#####################################################################
+##################### Finish the cleaning process ###################
+####################################################################
+
+# move everything to new csv file
+df.to_csv('data/cleaned.csv', index=False)
